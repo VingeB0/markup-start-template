@@ -1,0 +1,55 @@
+// @include inlineblock (middle);
+// @extend %clearfix; 
+
+// Спрайт
+// display: inline-block;
+// @include sprite($s-profle);
+
+@mixin box-shadow($params)
+  -webkit-box-shadow: $params
+     -moz-box-shadow: $params
+          box-shadow: $params
+
+%clearfix
+  *zoom: 1
+  &:after,
+  &:before
+    display: table
+
+    content: ''
+
+  &:after
+    clear: both;
+
+@mixin inlineblock($valign: top)
+  display: inline-block
+
+  vertical-align: $valign
+
+%ul
+  font-size: 0
+  padding: 0
+  margin: 0
+  list-style: none
+
+// Миксины для спрайта
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y;
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(../img/sprite/#{$sprite-image});
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)

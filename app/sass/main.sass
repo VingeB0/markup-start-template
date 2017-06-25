@@ -1,0 +1,48 @@
+@import 'app/libs/normalize/normalize'
+@import 'fonts.sass'
+// Подключаем спрайты
+// @import 'sprite.sass'
+// Подключаем миксины
+@import 'mixins.sass'
+// Свои стили для тегов, прижатие футера, прелоадер
+@import 'adjustment.sass'
+// Стили шапки
+@import 'modules/header.sass'
+// Подключаем переменные
+@import 'vars.sass'
+
+body
+  font-size: 16px
+  line-height: 1.75
+
+  position: relative
+
+  overflow-x: hidden
+
+  min-width: 320px
+  text-size-adjust: none
+  -webkit-font-smoothing: antialiased
+
+.img-responsive
+  display: block
+
+  max-width: 100%
+  height: auto
+
+.hide
+  display: none
+
+.show
+  display: block
+
+.container
+  width: 100%
+  max-width: 1180px
+  margin: 0 auto
+
+// Стили главной страницы
+@import 'pages/index.sass'
+// Стили футера
+@import 'modules/footer.sass'
+// Стили медиазапросов
+@import 'media.sass'
