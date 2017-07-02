@@ -4,8 +4,10 @@ html(lang="ru-RU")
 	head
 		meta(charset="utf-8")
 		meta(http-equiv='X-UA-Compatible', content="IE = edge")
-		meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
-
+				//- Яндекс.Браузер
+		meta(name="viewport" content="ya-title=fade,ya-dock=fade")
+			
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
 		meta(name="keywords" content="мета-теги, шаблон, html, css")
 		meta(name="author" content="")
 		meta(name="description" content="описание не длиннее 155 символов")
@@ -66,23 +68,9 @@ html(lang="ru-RU")
 		//- iOS Safari
 		meta(name="apple-mobile-web-app-status-bar-style" content="#000")
 		meta(name="apple-mobile-web-app-capable" content="yes")
-		//- Яндекс.Браузер
-		meta(name="viewport" content="ya-title=#000,ya-dock=fade")
 
 		link(rel="stylesheet" type='text/css' href="css/main.css")
 		link(rel="stylesheet" type='text/css' href="css/libs.css")
-
-		// HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
-		// WARNING: Respond.js doesn't work if you view the page via file://
-		// if lt IE 9
-			link(rel="stylesheet" href="css/ie9.css")
-			script(src="libs/html5shiv/html5shiv.min.js")
-			script(src="libs/html5shiv/es5-shim.min.js")
-			script(src="libs/html5shiv/html5shiv-printshiv.min.js")
-			script(src="libs/respond/respond.min.js")
-		
-		script(src="libs/modernizr/modernizr.js")
-		//- обеспечивает функционал html5 Для старых браузеров и нужен для определения их возможностей
 
 		title
 			block title
@@ -91,22 +79,12 @@ html(lang="ru-RU")
 		.loader
 			.loader_inner
 		
-		// if lt IE 9
-			p.browsehappy
-				You are using an <strong>outdated</strong> browser.
-				Please <a href="http://browsehappy.com/">upgrade your browser</a>
-				to improve your experience.
-
 		.wrapper
 			.content
 				include ../modules/header
 				block content
 			include ../modules/footer
-			//- include ../modules/popup
 
-		script(src="libs/jquery/dist/jquery-1.11.2.min.js")
+		script(src="js/jquery-1.11.2.min.js")
 		script(src="js/libs.min.js")
 		script(src="js/common.js")
-
-		// Yandex.Metrika informer
-		// Yandex.Metrika counter

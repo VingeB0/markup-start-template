@@ -1,9 +1,9 @@
-// @include inlineblock (middle);
-// @extend %clearfix; 
+// @include inlineblock (middle)
+// @extend %clearfix
 
 // Спрайт
-// display: inline-block;
-// @include sprite($s-profle);
+// display: inline-block
+// @include sprite($s-profle)
 
 @mixin box-shadow($params)
   -webkit-box-shadow: $params
@@ -23,14 +23,7 @@
 
 @mixin inlineblock($valign: top)
   display: inline-block
-
   vertical-align: $valign
-
-%ul
-  font-size: 0
-  padding: 0
-  margin: 0
-  list-style: none
 
 // Миксины для спрайта
 @mixin sprite-width($sprite)

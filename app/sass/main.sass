@@ -1,45 +1,41 @@
-@import 'app/libs/normalize/normalize'
+// Подключаем переменные
+@import 'vars.sass'
+// Подключаем шрифты
 @import 'fonts.sass'
-// Подключаем спрайты
+// Подключаем спрайты (просто раскоментируем импорт при появлении PNG спрайтов)
 // @import 'sprite.sass'
 // Подключаем миксины
 @import 'mixins.sass'
 // Свои стили для тегов, прижатие футера, прелоадер
 @import 'adjustment.sass'
-// Стили шапки
-@import 'modules/header.sass'
-// Подключаем переменные
-@import 'vars.sass'
 
 body
   font-size: 16px
-  line-height: 1.75
-
+  line-height: 1
   position: relative
-
   overflow-x: hidden
-
   min-width: 320px
   text-size-adjust: none
   -webkit-font-smoothing: antialiased
+  font-family: $mainFont, $font-family
+  color: $mainColor
 
-.img-responsive
-  display: block
-
-  max-width: 100%
-  height: auto
-
-.hide
-  display: none
-
-.show
-  display: block
+section
+  position relative
+  padding: 100px 0
 
 .container
-  width: 100%
-  max-width: 1180px
+  position: relative
+  width: 98%
+  max-width: 1170px
   margin: 0 auto
 
+// Общие стили
+@import 'common.sass'
+// Стили шапки
+@import 'modules/header.sass'
+// Стили секции главный баннер
+@import 'sections/top_banner.sass'
 // Стили главной страницы
 @import 'pages/index.sass'
 // Стили футера

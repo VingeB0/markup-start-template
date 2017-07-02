@@ -11,10 +11,8 @@ body,
   padding-bottom: 90px
 
 .footer
-  height: 80px
   margin-top: -80px
 
-/*Press footer*/
 /*Preloader*/
 .loader
   position: fixed
@@ -45,11 +43,9 @@ body,
   background-position: center center
   background-size: cover
 
-/*Preloader*/
 /*Adjustment*/
-*
-  -webkit-box-sizing: border-box
-          box-sizing: border-box
+*, *:before, *:after
+  box-sizing: border-box
 
 html
   font-size: 14px
@@ -68,7 +64,6 @@ p
 
 a
   text-decoration: none
-
   color: #000
 
 audio,
@@ -81,6 +76,17 @@ video
 
 textarea
   resize: none
+
+input,
+select,
+button
+  outline: none
+
+ul, li
+  padding: 0
+  margin: 0
+  list-style: none
+  font-size: 0
 
 *::-webkit-input-placeholder
   opacity: 1

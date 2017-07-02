@@ -68,8 +68,7 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 // Работа с JS
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
-        'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
-        'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js' // Берем Magnific Popup
+        'app/libs/slick/slick.min.js' // slickslider
         ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл
@@ -158,6 +157,7 @@ gulp.task('build', ['clean', 'img', 'sass', 'coommon-scripts', 'scripts'], funct
 
     var buildCss = gulp.src([ // Переносим библиотеки в продакшен
         'app/css/main.css',
+        'app/css/libs.css',
         'app/css/libs.min.css',
         'app/css/main.min.css'
         ])
