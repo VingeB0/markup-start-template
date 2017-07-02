@@ -1,10 +1,10 @@
-# HTML5 template, Gulp file, Scss, Pug, GulpSpriteSmith and Bower (libs path).
+# Start template - Html5, css3, gulp file, sass, pug, GulpSprite
 
 - gulp - run the template
 - gulp build - build project
 - gulp sprite - build sprite png
 - gulp clear - clearing the cache from images
 
-###### To start, you need to install Nodeys from the site https://nodejs.org/en/.
-###### Then open the terminal (Command line in Windows) and run the following command: npm i gulp -g.
+###### 1. install Node - https://nodejs.org/en/.
+###### In Command line in Windows following command: npm i gulp -g.
 ###### To perform the initialization of the project in the folder that you created: npm init.
