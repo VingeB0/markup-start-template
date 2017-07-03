@@ -30,18 +30,6 @@ gulp.task('sass', function(){ // Создаем таск Sass
         })); // Обновляем CSS на странице при изменении
 });
 
-// Работа со CSS
-// gulp.task('sass', function(){ // Создаем таск css
-//     return gulp.src('app/css/**/*.css') // Берем источник
-//         .pipe(plumber())
-//         .pipe(sass({outputStyle: 'expanded'})).on("error", notify.onError(function(error) {
-//             return "Message to the notifier: " + error.message;
-//           }))  // Преобразуем Sass в CSS посредством gulp-sass
-//         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
-//         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
-//         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
-// });
-
 // Работа с Pug
 gulp.task('pug', function() {
     return gulp.src('app/pug/pages/*.pug')
