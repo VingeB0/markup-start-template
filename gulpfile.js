@@ -13,8 +13,7 @@ var gulp         = require('gulp'), // Подключаем Gulp
     plumber      = require('gulp-plumber'), //предохраняет задачи от остановки во время их выполнения
     pug          = require('gulp-pug'), //Подключаем шаблонизатор для html PUG(jade)
     notify       = require("gulp-notify"), // Подключаем плагин для вывода ошибок
-    spritesmith  = require("gulp.spritesmith"), // Подключаем модуль для сборки спрайтов
-    newer        = require("gulp-newer");
+    spritesmith  = require("gulp.spritesmith"); // Подключаем модуль для сборки спрайтов
 
 // Работа со SASS(SASS)
 gulp.task('sass', function(){ // Создаем таск Sass
@@ -40,7 +39,10 @@ gulp.task('pug', function() {
         .on("error", notify.onError(function(error) {
             return "Message to the notifier: " + error.message;
         }))
-        .pipe(gulp.dest('app'));
+        .pipe(gulp.dest('app'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 
 // Browsersync
@@ -123,7 +125,6 @@ gulp.task('watch', ['browser-sync', 'css-libs', 'css-main', 'scripts'], function
     gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
     gulp.watch('app/pug/**/*.pug', ['pug']); // Наблюдение за PUG файлами в корне проекта
     gulp.watch('app/js/**/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js
-    gulp.watch('app/css/**/*.css', browserSync.reload);   // Наблюдение за JS файлами в папке js
 });
 
 gulp.task('clean', function() {
