@@ -1,9 +1,9 @@
-# Start template - Html5, css3, gulp file, sass, pug, GulpSprite
+# Start template - Html5, css3, gulp file, sass, pug, pngSprite, svgSprite, csscomb, sourcemaps
 
 - gulp - run the template
 - gulp build - build project
-- gulp sprite - build sprite png
-- gulp clear - clearing the cache from images
+- gulp pngSprite - build sprite png
+- gulp svgSprite - build sprite svg
 
 ###### 1. install Node - https://nodejs.org/en/.
 ###### In Command line in Windows following command: npm i gulp -g.

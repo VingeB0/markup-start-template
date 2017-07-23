@@ -1,28 +1,80 @@
-// Подключаем переменные
-@import 'vars.sass'
-// Подключаем шрифты
 @import 'fonts.sass'
-// Подключаем спрайты (просто раскоментируем импорт при появлении PNG спрайтов)
-// @import 'sprite.sass'
-// Подключаем миксины
+@import 'vars.sass'
+@import 'libs.sass'
+// @import 'pngSprite.sass'
 @import 'mixins.sass'
-// Свои стили для тегов, прижатие футера, прелоадер
-@import 'adjustment.sass'
 
-body
+/*Press footer*/
+html,
+body,
+.wrapper
+  height: 100%
+  
+.content
+  -webkit-box-sizing: border-box
+          box-sizing: border-box
+  min-height: 100%
+  padding-bottom: 90px
+
+.footer
+  margin-top: -80px
+
+/*Adjustment*/
+*, *:before, *:after
+  box-sizing: border-box
+
+html
   font-size: 16px
   line-height: 1
+
+h1,h2,h3,h4,h5,h6
+  margin: 0
+
+p
+  margin: 0
+
+a
+  text-decoration: none
+  color: #000
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+  vertical-align: middle
+
+textarea
+  resize: none
+
+input,
+select,
+button
+  outline: none
+
+ul, li
+  padding: 0
+  margin: 0
+  list-style: none
+
+::selection
+  background: #b3d4fc
+  text-shadow: none
+
+body
   position: relative
   overflow-x: hidden
   min-width: 320px
   text-size-adjust: none
   -webkit-font-smoothing: antialiased
-  font-family: $mainFont, $font-family
+  font-family: $familyFont, $mainFont
+  font-size: 16px
+  line-height: 1
   color: $mainColor
 
 section
   position relative
-  padding: 100px 0
 
 .container
   position: relative
