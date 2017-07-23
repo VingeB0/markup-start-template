@@ -1,48 +1,48 @@
 // @include inlineblock (middle)
 // @extend %clearfix
 
-// Спрайт
+// Sprite
 // display: inline-block
 // @include sprite($s-profle)
 
-@mixin box-shadow($params)
-  -webkit-box-shadow: $params
-     -moz-box-shadow: $params
-          box-shadow: $params
+// Function convert px to rem
+// font-size: rem(18)
+
+$baseFontSize : 16
+@function rem($size: $baseFontSize)
+	@return $size / $baseFontSize * 1rem
 
 %clearfix
-  *zoom: 1
-  &:after,
-  &:before
-    display: table
-
-    content: ''
-
-  &:after
-    clear: both;
+	*zoom: 1
+	&:after,
+	&:before
+		display: table
+		content: ''
+	&:after
+		clear: both
 
 @mixin inlineblock($valign: top)
-  display: inline-block
-  vertical-align: $valign
+	display: inline-block
+	vertical-align: $valign
 
 // Миксины для спрайта
 @mixin sprite-width($sprite)
-  width: nth($sprite, 5)
+	width: nth($sprite, 5)
 
 @mixin sprite-height($sprite)
-  height: nth($sprite, 6)
+	height: nth($sprite, 6)
 
 @mixin sprite-position($sprite)
-  $sprite-offset-x: nth($sprite, 3)
-  $sprite-offset-y: nth($sprite, 4)
-  background-position: $sprite-offset-x  $sprite-offset-y;
+	$sprite-offset-x: nth($sprite, 3)
+	$sprite-offset-y: nth($sprite, 4)
+	background-position: $sprite-offset-x  $sprite-offset-y
 
 @mixin sprite-image($sprite)
-  $sprite-image: nth($sprite, 9)
-  background-image: url(../img/sprite/#{$sprite-image});
+	$sprite-image: nth($sprite, 9)
+	background-image: url(../img/sprite/#{$sprite-image})
 
 @mixin sprite($sprite)
-  @include sprite-image($sprite)
-  @include sprite-position($sprite)
-  @include sprite-width($sprite)
-  @include sprite-height($sprite)
+	@include sprite-image($sprite)
+	@include sprite-position($sprite)
+	@include sprite-width($sprite)
+	@include sprite-height($sprite)

@@ -1,21 +1,6 @@
-$(window).load(function() {
-	$(".loader_inner").fadeOut();
-	$(".loader").delay(400).fadeOut("slow");
+$(document).ready(function () {
+	svg4everybody({});
 });
-
-// var docShow = document.querySelector(".show");
-// var docMenu = document.querySelector(".nav__menu");
-// var docBtn = document.querySelector(".hide-nav");
-
-// docBtn.addEventListener("click", function (e) {
-// 	e.preventDefault();
-// 	if (docShow = document.querySelector(".show")) 
-// 		{	docMenu.classList.remove("show"); } 
-// 	else {
-// 		(docShow = document.querySelector(".show")) 
-// 		{	docMenu.classList.add("show"); } 
-// 	}
-// });
 
 // $(document).ready(function(){
 
