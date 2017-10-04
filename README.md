@@ -1,4 +1,4 @@
-# Start template - Html5, css3, gulp file, sass, pug, pngSprite, svgSprite, csscomb, sourcemaps
+# Start template - Html5, css3, gulp file, sass, pug, pngSprite, svgSprite, sourcemaps, babel transpiler es6 to es5
 
 - gulp - run the template
 - gulp build - build project
