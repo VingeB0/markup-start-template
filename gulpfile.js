@@ -183,7 +183,7 @@ gulp.task('build', ['clean', 'img', 'sass', 'common-scripts', 'scripts'], functi
 	var buildHtml = gulp.src('dev/*.html')
 	.pipe(gulp.dest('build'));
 
-	var buildImg = gulp.src('dev/img/sprite/sprite.png')
+	var buildImg = gulp.src('dev/img/pngSprite/sprite.png')
 	.pipe(gulp.dest('build/img/sprite/'));
 });
 
