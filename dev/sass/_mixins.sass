@@ -1,3 +1,4 @@
+// examples for usage
 // @include inlineblock (middle)
 // @extend %clearfix
 
@@ -8,7 +9,16 @@
 // Function convert px to rem
 // font-size: rem(18)
 
-$baseFontSize : 16
+//+retinaPR2
+	body
+		background: red
+
+//+retinaPR3
+	body
+		color: blue
+
+//mixin convert pixel to rem
+$baseFontSize: 16
 @function rem($size: $baseFontSize)
 	@return $size / $baseFontSize * 1rem
 
@@ -25,7 +35,16 @@ $baseFontSize : 16
 	display: inline-block
 	vertical-align: $valign
 
-// Миксины для спрайта
+//mixin retina media
+@mixin retinaPR2
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2)
+		@content
+
+@mixin retinaPR3
+	@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-device-pixel-ratio: 3)
+		@content
+
+//mixins for png sprite
 @mixin sprite-width($sprite)
 	width: nth($sprite, 5)
 
@@ -35,7 +54,7 @@ $baseFontSize : 16
 @mixin sprite-position($sprite)
 	$sprite-offset-x: nth($sprite, 3)
 	$sprite-offset-y: nth($sprite, 4)
-	background-position: $sprite-offset-x  $sprite-offset-y
+	background-position: $sprite-offset-x $sprite-offset-y
 
 @mixin sprite-image($sprite)
 	$sprite-image: nth($sprite, 9)

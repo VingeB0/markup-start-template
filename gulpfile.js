@@ -64,7 +64,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('scripts', function() {
 	return gulp.src([
-		'dev/libs/svg4everybody/svg4everybody.min.js'
+		// 'dev/libs/svg4everybody/svg4everybody.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())

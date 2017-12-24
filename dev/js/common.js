@@ -1,3 +1,8 @@
 'use strict';
 
-svg4everybody({});
+$(document).ready(function() {
+	$('.your-class').slick({
+	});
+	svg4everybody({});
+
+});

@@ -1,15 +1,36 @@
+//pointer-events none
 @import 'fonts.sass'
 @import 'vars.sass'
 @import 'libs.sass'
 // @import 'pngSprite.sass'
 @import 'mixins.sass'
 
-*, *:before, *:after
+*
   box-sizing: border-box
+  background: transparent
+  &:before, &:after
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
 
 html
-  font-size: 16px
-  line-height: 1
+  height: 100%
+  font-size: 100% // - 16px
+  line-height: 1.3
 
 h1,h2,h3,h4,h5,h6
   margin: 0
@@ -19,6 +40,7 @@ p
 
 a
   text-decoration: none
+  -webkit-tap-highlight-color: transparent
   color: #000
 
 audio,
@@ -34,8 +56,12 @@ textarea
 
 input,
 select,
-button
+textarea
+  appearance: none
   outline: none
+  border-radius: 0
+  background-clip: padding-box
+  border: 1px solid #666
 
 ul, li
   padding: 0
@@ -47,24 +73,36 @@ ul, li
   text-shadow: none
 
 body
+  height: 100%
   position: relative
   overflow-x: hidden
   min-width: 320px
   text-size-adjust: none
   -webkit-font-smoothing: antialiased
-  font-family: $mainFont$, familyFont
-  font-size: 16px
-  line-height: 1
-  color: $mainColor
+  font-family: $SSPR, $sserif
+  font-size: 100% // - 16px
+  line-height: 1.3
+  color: #000
 
 section
-  position relative
+  position: relative
+
+// press footer
+body
+  display: flex
+  flex-direction: column
+
+main
+  flex-grow: 1
 
 .container
   position: relative
   width: 98%
   max-width: 1170px
   margin: 0 auto
+
+.hidden
+  display: none
 
 // Общие стили
 @import 'common.sass'
