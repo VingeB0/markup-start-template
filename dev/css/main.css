@@ -1,23 +1,26 @@
 @charset "UTF-8";
 @font-face {
   font-family: "SourceSansProRegular";
-  src: url("../fonts/SourceSansProRegular/SourceSansProRegular.woff2") format("woff2"), url("../fonts/SourceSansProRegular/SourceSansProRegular.woff") format("woff"), url("../fonts/SourceSansProRegular/SourceSansProRegular.ttf") format("truetype");
+  src: url("../fonts/SourceSansProRegular/SourceSansProRegular.woff2") format("woff2"), url("../fonts/SourceSansProRegular/SourceSansProRegular.woff") format("woff");
   font-style: normal;
   font-weight: normal;
+  font-display: optional;
 }
 
 @font-face {
   font-family: "SourceSansProLight";
-  src: url("../fonts/SourceSansProLight/SourceSansProLight.woff2") format("woff2"), url("../fonts/SourceSansProLight/SourceSansProLight.woff") format("woff"), url("../fonts/SourceSansProLight/SourceSansProLight.ttf") format("truetype");
+  src: url("../fonts/SourceSansProLight/SourceSansProLight.woff2") format("woff2"), url("../fonts/SourceSansProLight/SourceSansProLight.woff") format("woff");
   font-style: normal;
   font-weight: normal;
+  font-display: optional;
 }
 
 @font-face {
   font-family: "SourceSansProBold";
-  src: url("../fonts/SourceSansProBold/SourceSansProBold.woff2") format("woff2"), url("../fonts/SourceSansProBold/SourceSansProBold.woff") format("woff"), url("../fonts/SourceSansProBold/SourceSansProBold.ttf") format("truetype");
+  src: url("../fonts/SourceSansProBold/SourceSansProBold.woff2") format("woff2"), url("../fonts/SourceSansProBold/SourceSansProBold.woff") format("woff");
   font-style: normal;
   font-weight: normal;
+  font-display: optional;
 }
 
 html {
@@ -6669,6 +6672,7 @@ body {
       -ms-text-size-adjust: none;
           text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: "SourceSansProRegular", Arial, Tahoma, sans-serif;
   font-size: 100%;
   line-height: 1.5;
