@@ -35,7 +35,7 @@ gulp.task('sass', function(){
 		.pipe(gulp.dest('dev/css'))
 		.pipe(browserSync.reload({
 			stream: true
-		}));
+		}))
 });
 
 gulp.task('pug', function() {
@@ -153,6 +153,7 @@ gulp.task('css-main', ['sass'], function() {
 
 gulp.task('watch', ['browser-sync', 'css-main', 'scripts'], function() {
 	gulp.watch('dev/sass/**/*.sass', ['sass']);
+	gulp.watch('dev/libs/**/*.css', ['sass']);
 	gulp.watch('dev/*.html', browserSync.reload);
 	gulp.watch('dev/pug/**/*.pug', ['pug']);
 	gulp.watch('dev/js/**/*.js', ['common-scripts']);

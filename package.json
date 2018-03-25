@@ -32,7 +32,6 @@
     "gulp-prettify": "^0.5.0"
   },
   "dependencies": {
-
   },
   "optionalDependencies": {}
 }
