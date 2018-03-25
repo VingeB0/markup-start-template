@@ -9,6 +9,7 @@ var gulp       = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	plumber      = require('gulp-plumber'),
 	pug          = require('gulp-pug'),
+    prettify     = require('gulp-prettify'),
 	notify       = require("gulp-notify"),
 	spritesmith  = require("gulp.spritesmith"),
 	sourcemaps	 = require('gulp-sourcemaps'),
@@ -43,6 +44,9 @@ gulp.task('pug', function() {
 		.pipe(pug({
 			pretty: true
 		}))
+        .pipe(prettify({
+            unformatted: []
+        }))
 		.on("error", notify.onError(function(error) {
 			return {
 				title: 'Pug',
@@ -86,7 +90,7 @@ gulp.task('pngSpriteBuild', function() {
 			cssName: 'pngSprite.sass',
 			padding: 15,
 			cssFormat: 'sass',
-			algorithm: 'binary-tree', 
+			algorithm: 'binary-tree',
 			cssTemplate: 'handlebarsInheritance.sass.handlebars',
 			cssVarMap: function(sprite) {
 				sprite.name = 's-' + sprite.name;
@@ -130,7 +134,7 @@ gulp.task('common-scripts', function() {
 		'dev/js/common.js'
 		])
 		.pipe(plumber())
-		.pipe(babel())    
+		.pipe(babel())
 		.pipe(concat('common.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('dev/js'))
