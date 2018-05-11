@@ -1,10 +1,10 @@
 //pointer-events: none
 //user-select: none
-@import '_fonts.sass'
-@import '_vars.sass'
-@import '_libs.sass'
+@import 'fonts.sass'
+@import 'vars.sass'
+@import 'libs.sass'
 // @import 'pngSprite.sass'
-@import '_mixins.sass'
+@import 'mixins.sass'
 
 *
   box-sizing: border-box
@@ -13,23 +13,19 @@
     box-sizing: border-box
 
 *::-webkit-input-placeholder
-  color: #b6b6b6
+  color: #666
   opacity: 1
-  font: 400 14px/36px $RR, $sserif
 
 *:-moz-placeholder
-  color: #b6b6b6
+  color: #666
   opacity: 1
-  font: 400 14px/36px $RR, $sserif
 
 *::-moz-placeholder
-  color: #b6b6b6
+  color: #666
   opacity: 1
-  font: 400 14px/36px $RR, $sserif
 
 *:-ms-input-placeholder
-  color: #b6b6b6
-  font: 400 14px/36px $RR, $sserif
+  color: #666
   opacity: 1
 
 html
@@ -94,11 +90,11 @@ body
   height: 100%
   position: relative
   overflow-x: hidden
-  //min-width: 320px
+  min-width: 320px
   text-size-adjust: none
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  font-family: $RR, $sserif
+  font-family: $SSPR, $sserif
   font-size: 100% // - 16px
   line-height: 1.5
   color: #000
@@ -111,33 +107,27 @@ body
   display: flex
   flex-direction: column
 
-body
-  display: flex
-  flex-direction: column
-  height: 100%
-  background: radial-gradient(at center center, #fefefe 0%, #f5f5f5 48%, #e2e2e2 67%, #cecece 88%, #bebebe 100%)
-
 main
   flex-grow: 1
 
 .container
   position: relative
-  width: 100%
-  max-width: 960px
+  width: 98%
+  max-width: 1170px
   margin: 0 auto
 
 .hidden
   display: none
 
 // Общие стили
-@import '_common.sass'
+@import 'common.sass'
 // Стили шапки
 @import 'modules/header.sass'
 // Стили секции баннера
-@import 'sections/index'
+@import 'sections/top_banner.sass'
 // Стили главной страницы
 @import 'pages/index.sass'
 // Стили футера
 @import 'modules/footer.sass'
 // Стили медиазапросов
-@import '_media.sass'
+@import 'media.sass'
