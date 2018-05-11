@@ -1,0 +1,138 @@
+.footer
+  background-color: #4f5052
+  .container
+    display: flex
+    flex-flow: wrap row
+    justify-content: space-between
+    padding-top: 60px
+    padding-bottom: 80px
+    max-width: 960px
+  &-contacts,
+  &-socials
+    p,
+    a
+      position: relative
+      display: block
+      padding-left: 90px
+      margin-bottom: 30px
+      color: #d2d2d2
+      font: 400 16px/1 $RR, $sserif
+    a
+      text-decoration: underline
+      &:after
+        transition: transform .3s linear
+      &:hover
+        text-decoration: none
+        &:after
+          transform: translate(0, -50%) rotate(35deg)
+
+
+  &-socials
+    a
+      &:after
+        content: ''
+        position: absolute
+        left: 28px
+        top: 50%
+        transform: translate(0, -50%)
+        width: 33px
+        height: 33px
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: auto
+      &:nth-child(1)
+        &:after
+          background-image: url(../img/general/icon-fb.png)
+      &:nth-child(2)
+        &:after
+          background-image: url(../img/general/icon-inst.png)
+
+  &-contacts
+    &__wrap
+      position: relative
+      display: flex
+      margin-bottom: 30px
+      a
+        margin-bottom: 0
+      &:after
+        background-image: url(../img/general/icon-phone.png)
+        transition: transform .3s linear
+      &:hover
+        text-decoration: none
+        &:after
+          transform: translate(0, -50%) rotate(35deg)
+    p,
+    a,
+    &__wrap
+      &:after
+        content: ''
+        position: absolute
+        left: 28px
+        top: 50%
+        transform: translate(0, -50%)
+        width: 33px
+        height: 33px
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: auto
+      a
+        &:nth-child(2)
+          padding-left: 40px
+    p
+      &:after
+        background-image: url(../img/general/icon-address.png)
+    & > a
+      margin-bottom: 30px
+      &:after
+        background-image: url(../img/general/icon-mail.png)
+
+  &-copy
+    width: 100%
+    margin-top: 10px
+    padding: 30px 10px 0
+    color: #e0e0e0
+    border-top: 1px solid #444444
+    font: 400 12px/1 $RR, $sserif
+
+
+
+  &-copyright
+    display: flex
+    flex-flow: wrap row
+    justify-content: space-between
+    align-items: center
+    padding: 32px 46px
+    background-color: #5b5c5e
+    a
+      transition: color .3s linear
+      &:hover
+        color: #e2e2e2
+        text-decoration: none
+    &__left
+      a
+        color: #000
+        font: 400 16px/1 $RR, $sserif
+        text-decoration: underline
+    &__right
+      display: flex
+      flex-flow: wrap row
+    &__info
+      display: flex
+      flex-flow: wrap column
+      justify-content: space-between
+      margin-right: 20px
+      text-align: right
+      span,
+      a
+        color: #000
+        font: 400 12px/1 $RR, $sserif
+      a
+        text-decoration: underline
+    &__logo
+      max-width: 107px
+      width: 100%
+      a
+        display: block
+      img
+        display: block
+        width: 100%

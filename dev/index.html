@@ -35,45 +35,170 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">header
-        <i class="fa fa-address-book-o"></i>
-        <ul>
-          <li>
-            <a>adsf</a>
-          </li>
-          <li>
-            <a>fawf a</a>
-          </li>
-          <li>
-            <a>asfsaf</a>
-          </li>
-          <li>
-            <a>fasf
-              <img>
-            </a>
-          </li>
-        </ul>
+      <div class="header__top">
+        <div class="container">
+          <div class="header__top-lang">
+            <a href="#">Ru</a>
+            <a href="#">En</a>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#ex1" title="О нас">
+                  <span>О нас</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#ex2" title="Преимущества">
+                  <span>Преимущества</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#ex3" title="Обратная связь">
+                  <span>Обратная связь</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="logo">
+            <img src="./img/general/logo.png" alt="SolstadFarstad Ukraine">
+            <span>Ukraine</span>
+          </div>
+        </div>
       </div>
     </header>
     <main>
-      <section class="top-bg">
+      <div class="top-banner">
         <div class="container">
-          <div class="top-banner__text">top banner in main</div>
+          <div class="top-banner__slider">
+            <div class="top-banner__slider-item"></div>
+            <div class="top-banner__slider-item"></div>
+            <div class="top-banner__slider-item"></div>
+            <div class="top-banner__slider-item"></div>
+          </div>
         </div>
-      </section>
+      </div>
+      <div class="about" id="ex1">
+        <div class="container">
+          <div class="about__wrap">
+            <div class="about__title">
+              <h2>О нас</h2>
+            </div>
+            <div class="about__info">
+              <div class="about__left">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <div class="about__right">
+                <div class="about__img">
+                  <img src="./img/general/about-img.jpg">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="advantages" id="ex2">
+        <div class="container">
+          <div class="advantages__wrap">
+            <div class="advantages__title">
+              <h2>Несколько преимуществ</h2>
+            </div>
+            <ul class="advantages__list">
+              <li class="advantages__item">Усу ех еирмод интеллегам аццоммодаре. Ессе перфецто еум те, нострум сплендиде ассентиор еос ид.</li>
+              <li class="advantages__item">Цум ех партем яуидам иуварет, натум дицам елеифенд но меа.</li>
+              <li class="advantages__item">Сингулис цотидиеяуе пер еа, иллуд нострум ест ут.</li>
+              <li class="advantages__item">Лорем ипсум долор сит амет, еум тале чоро те, но тале еффициенди дуо. Поссе децоре сед не.</li>
+              <li class="advantages__item">Яуо ут глориатур волуптариа ратионибус, ад нам симилияуе цонституам.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="feedback" id="ex3">
+        <div class="container">
+          <div class="feedback__title">
+            <h2>Обратная связь</h2>
+          </div>
+          <div class="feedback__contacts">
+            <div class="feedback__contacts-left">
+              <p>Французький Бульвар 66/2, бізнес-центр "Кадорр" 65009 Одеса, Україна</p>
+              <a href="tel:+380 48 794 4036">Тел: (+380) 48 794 4036</a>
+              <a href="tel:+380 66 642 4036">Моб: (+380) 66 642 4036</a>
+              <a href="mailto:office.ukraine@solstadfarstad.com">Пошта: office.ukraine@solstadfarstad.com</a>
+            </div>
+            <div class="feedback__contacts-right">
+              <div class="feedback__contacts-map"></div>
+            </div>
+          </div>
+          <div class="feedback__form">
+            <form action="send.php" method="POST">
+              <div class="feedback__form-top">
+                <div class="input-wrap">
+                  <input type="text" placeholder="Ваше имя" required> </div>
+                <div class="input-wrap">
+                  <input type="email" placeholder="E-mail" required> </div>
+              </div>
+              <div class="input-wrap">
+                <textarea placeholder="Текст сообщения"></textarea>
+                <div class="feedback__upload">
+                  <label for="feedback__upload"></label>
+                  <input type="file" name="feedback__upload" id="feedback__upload"> </div>
+              </div>
+              <button>Отправить</button>
+            </form>
+          </div>
+          <div class="feedback__decor">
+            <img src="./img/general/footer-decor.png">
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
-      <div class="container">footer</div>
+      <div class="container">
+        <div class="footer-contacts">
+          <p>Французький Бульвар 66/2, бізнес-центр "Кадорр"</p>
+          <div class="footer-contacts__wrap">
+            <a href="tel:+380 48 794 4036">(+380) 48 794 4036</a>
+            <a href="tel:+380 66 642 4036">(+380) 66 642 4036</a>
+          </div>
+          <a href="mailto:office.ukraine@solstadfarstad.com">office.ukraine@solstadfarstad.com</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/SolstadFarstad/" target="_blank" title="facebook">https://www.facebook.com/SolstadFarstad/</a>
+          <a href="https://www.linkedin.com/company/solstadfarstad/" target="_blank" title="linkedin">https://www.linkedin.com/company/solstadfarstad/</a>
+        </div>
+        <div class="footer-copy">Copyright 2017 SolstadFarstad ASA All rights reserved</div>
+      </div>
+      <div class="footer-copyright">
+        <div class="footer-copyright__left">
+          <a href="http://rexit.info" target="_blank" title="rex.it">How to make a Website?</a>
+        </div>
+        <div class="footer-copyright__right">
+          <div class="footer-copyright__info">
+            <span>© RexIT, 2018</span>
+            <a href="http://rexit.info" target="_blank" title="rex.it">Web Design & Development</a>
+          </div>
+          <div class="footer-copyright__logo">
+            <a href="http://rexit.info" target="_blank" title="rex.it">
+              <img src="./img/general/logo-rexit.png" alt="rex.it">
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
+    <div class="download">
+      <a href="./img/general/logo-rexit.png" download></a>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="libs/svg4everybody/svg4everybody.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
     <script src="libs/wowjs/wow.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyAXdr5ndU0U_KZ1qjGMMSD7FrB1UVYknBQ"></script>
     <script src="js/common.js"></script>
-    <script>
-      new WOW().init();
-      <!--<img class="wow zoomInUp" data-wow-offset="200" data-wow-delay="0.5s" data-wow-duration="2s" data-wow-iteration src="" alt="">-->
-    </script>
   </body>
 </html>

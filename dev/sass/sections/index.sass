@@ -1,0 +1,241 @@
+.top-banner
+  &__slider
+    &-item
+      display: flex
+      align-items: center
+      width: 100%
+      //max-height: 320px
+      background: transparent url(./../img/general/slider-item.jpg) center center no-repeat
+      background-size: cover
+      &:after
+        content: ""
+        display: block
+        padding-top: 33.34%
+      img
+        display: block
+        width: 100%
+
+
+.about
+  padding-top: 40px
+  &__wrap
+    padding-bottom: 40px
+    border-bottom: 1px solid #d2d2d2
+  &__title
+    position: relative
+    margin-bottom: 80px
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: -53px
+      height: 25px
+      width: 100%
+      background: transparent url(./../img/general/title-decor.png) no-repeat
+      pointer-events: none
+    h2
+      color: #444
+      font: 400 45px/36px $RR, $sserif
+      text-transform: uppercase
+  &__info
+    display: flex
+    flex-flow: nowrap row
+    justify-content: space-between
+  &__left
+    max-width: 400px
+    margin-right: 10px
+    p
+      color: #444
+      font: 300 16px/24px $RR, $sserif
+      text-align: justify
+  &__right
+    max-width: 480px
+  &__img
+    max-width: 480px
+    width: 100%
+    img
+      display: block
+      width: 100%
+
+.advantages
+  padding-top: 40px
+  &__wrap
+    padding-bottom: 40px
+    border-bottom: 1px solid #d2d2d2
+  &__title
+    position: relative
+    margin-bottom: 80px
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: -30px
+      height: 1px
+      background-color: #d2d2d2
+      width: 100%
+      pointer-events: none
+    h2
+      color: #444
+      font: 400 45px/36px $RR, $sserif
+      text-transform: uppercase
+  &__list
+  &__item
+    position: relative
+    margin-bottom: 20px
+    padding-left: 120px
+    color: #444
+    font: 500 16px/20px $RR, $sserif
+    &:after
+      content: ''
+      position: absolute
+      left: 24px
+      top: 50%
+      transform: translate(0, -50%)
+      width: 34px
+      height: 30px
+      background: transparent url(./../img/general/advantages-decor.png) center center no-repeat
+      background-size: auto
+
+
+.feedback
+  padding-top: 40px
+  &__title
+    position: relative
+    margin-bottom: 74px
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: -34px
+      height: 1px
+      background-color: #d2d2d2
+      width: 100%
+      pointer-events: none
+    h2
+      color: #444
+      font: 400 45px/36px $RR, $sserif
+      text-transform: uppercase
+  &__contacts
+    display: flex
+    flex-flow: wrap row
+    justify-content: space-between
+    padding-bottom: 34px
+    margin-bottom: 34px
+    border-bottom: 1px solid #d2d2d2
+    &-left
+      width: 100%
+      max-width: 390px
+      p,
+      a
+        display: block
+        color: #444
+        font: 400 16px/36px $RR, $sserif
+      a
+        &:hover
+          text-decoration: underline
+    &-right
+      width: 100%
+      max-width: 480px
+    &-map
+      max-width: 480px
+      height: 236px
+  &__decor
+    img
+      display: block
+      width: 100%
+  &__form
+    padding: 0 10px
+    &-top
+      display: flex
+      flex-flow: nowrap row
+      justify-content: space-between
+    .input-wrap
+      display: inline-block
+      margin-bottom: 26px
+      &:nth-child(2)
+        text-align: right
+      &:last-of-type
+        position: relative
+        width: 100%
+        margin-bottom: 20px
+    input
+      max-width: 100%
+      width: 460px
+      height: 60px
+    textarea
+      max-width: 100%
+      width: 940px
+      height: 130px
+      padding-top: 20px
+      padding-bottom: 20px
+    input,
+    textarea
+      padding-left: 28px
+      padding-right: 28px
+      border-radius: 10px
+      background-color: #e8e8ec
+      border: 1px solid transparent
+      font: 400 14px/20px $RR, $sserif
+      color: #2a2363
+      cursor: text
+      transition: box-shadow .2s linear
+      &:focus
+        box-shadow: 0px 0px 6px 0px #555787
+    button
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 0 auto
+      max-width: 140px
+      width: 100%
+      height: 40px
+      border-radius: 10px
+      background-color: #555787
+      color: #b6b6b6
+      font: 400 14px/36px $RR, $sserif
+      border: 2px solid transparent
+      transition: border-color .3s linear, background-color .3s linear, color .3s linear
+      &:hover
+        border: 2px solid #555787
+        background-color: rgba(85, 87, 135, .7)
+        color: #fff
+  &__upload
+    position: absolute
+    right: 10px
+    bottom: 15px
+    input
+      display: none
+    label
+      display: block
+      width: 48px
+      height: 48px
+      border-radius: 50%
+      background: #2a2363 url(./../img/general/icon-upload.png) center center no-repeat
+      background-size: auto
+      &:hover
+        opacity: .8
+
+.download
+  position: fixed
+  top: 500px
+  right: 6%
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 130px
+  height: 130px
+  border: 2px solid #2a2363
+  border-radius: 50%
+  cursor: pointer
+  &:hover
+    opacity: .8
+  a
+    display: block
+    border-radius: 50%
+    width: 114px
+    height: 114px
+    background: #555787 url(./../img/general/icon-download.png) center center no-repeat
+    background-size: auto

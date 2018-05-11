@@ -1,63 +1,218 @@
-/*==========  Desktop First Method  ==========*/
-
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1440px)
-	/**/
-
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-    /**/
-
-/* Large Devices, Wide Screens */
 @media only screen and (max-width : 1024px)
-	/**/
+  .download
+    top: 450px
+    right: 16px
+    width: 90px
+    height: 90px
+    a
+      width: 80px
+      height: 80px
+      background-size: 60%
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-    /**/
+  .nav
+    &__link
+      min-height: 80px
+      width: 184px
+    &__list
+      padding-left: 40px
 
-/* Small Devices, Tablets */
+  .about,
+  .advantages,
+  .feedback,
+  .header__top
+    .container
+      padding: 0 10px
+
+  .feedback__form-top
+    flex-flow: nowrap column
+  .feedback__form input,
+  .feedback__form textarea
+    width: 100%
+  .feedback__form .input-wrap
+    margin-bottom: 20px
+
+@media only screen and (max-width : 930px)
+  .about,
+  .advantages,
+  .feedback
+    padding-top: 16px
+    &__title
+      margin-bottom: 30px
+    h2
+      font-size: 32px
+      line-height: 30px
+
+  .about
+    padding-top: 22px
+    &__title
+      &:after
+        bottom: -38px
+    &__info
+      flex-flow: nowrap column
+    &__left
+      margin: 0 0 10px
+      p
+        font-size: 15px
+        line-height: 22px
+    &__left,
+    &__right
+      width: 100%
+      max-width: 100%
+    &__img
+      margin: 0 auto
+
+  .advantages
+    &__wrap
+      padding-bottom: 0
+    &__title
+      &:after
+        bottom: -14px
+    &__item
+      padding-left: 90px
+      font-size: 15px
+
+  .feedback
+    &__title
+      &:after
+        bottom: -14px
+    &__contacts
+      &-left
+        max-width: 100%
+      &-right
+        max-width: 100%
+      &-map
+        max-width: 100%
+        height: 300px
+
 @media only screen and (max-width : 768px)
-    /**/
+  .download
+    top: 450px
+    right: 16px
+    width: 60px
+    height: 60px
+    a
+      width: 50px
+      height: 50px
 
-/* Small Devices, Tablets */
-@media only screen and (max-width : 640px)
-    /**/
+  .about h2,
+  .advantages h2,
+  .feedback h2
+    line-height: 20px
+    font-size: 21px
+  .about__wrap
+    padding-bottom: 20px
 
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-    /**/
+  .feedback__form input
+    height: 50px
+    padding-left: 10px
+    padding-right: 10px
+  .feedback__form textarea
+    height: 150px
+    padding-left: 10px
+    padding-right: 10px
+    padding-top: 6px
+  .feedback__form
+    .input-wrap
+      margin-bottom: 10px
+      &:last-of-type
+        margin-bottom: 10px
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-    /**/
+  .advantages__item
+    padding-left: 34px
+    font-size: 14px
+    margin-bottom: 13px
+    &:after
+      left: -4px
+      background-size: 74%
+  .feedback__title
+    margin-bottom: 25px
+  .feedback__contacts
+    padding-bottom: 15px
+    margin-bottom: 15px
+  .feedback__contacts-left p,
+  .feedback__contacts-left a
+    font-size: 15px
+    line-height: 30px
 
-/*==========  Mobile First Method  ==========*/
+  .logo
+    padding-top: 6px
+    padding-right: 6px
+  .nav
+    display: flex
+    flex-flow: nowrap row
+    &__list
+      height: 100%
+      padding: 0
+    &__link
+      width: 184px
+      max-width: 100%
+      min-height: 100%
+      transform: none
+      span
+        transform: none
 
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-    /**/
+  .footer
+    .container
+      padding: 36px 10px 30px
+    &-copy
+      text-align: center
+      margin-top: 0
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-    /**/
+    .footer-contacts p,
+    .footer-contacts a,
+    .footer-socials p,
+    .footer-socials a
+      padding-left: 40px
+      font-size: 14px
+      line-height: 1.4
+      word-break: break-word
+      &:after
+        left: -6px
+    .footer-contacts__wrap
+      flex-flow: wrap row
+      &:after
+        left: -6px
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 640px)
-    /**/
+  .footer
+    &-copyright
+      padding: 16px 10px
+      &__left
+        a
+          font-size: 15px
+      &__left,
+      &__right
+        width: 100%
+        text-align: center
+      &__right
+        justify-content: center
+      &__info
+        margin: 10px 0 10px
+        span
+          margin-bottom: 10px
+      &__info,
+      &__logo
+        width: 100%
+        text-align: center
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-    /**/
+@media only screen and (max-width : 720px)
+  .nav
+    width: 100%
+    &__list
+      display: flex
+      flex-flow: nowrap row
+      width: 100%
+      margin: 0 auto
+    &__item
+      width: 33.19%
+    &__link
+      width: 100%
+      max-width: 100%
+  .logo
+    padding-right: 0px
+    margin: 0 auto
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-    /**/
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 1024px)
-    /**/
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
-    /**/
+@media only screen and (max-width : 460px)
+  .nav
+    &__link
+      font-size: 11.5px
+      letter-spacing: -.5px
