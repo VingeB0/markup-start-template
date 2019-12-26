@@ -1,11 +1,12 @@
-# Start template - Html5, css3, gulp file, sass, pug, pngSprite, svgSprite, sourcemaps, babel transpiler es6 to es5
+# Start markup template - Gulp + Pug + SASS  + BrowserSync
 
 - gulp - run the template
 - gulp build - build project
 - gulp pngSprite - build sprite png
 - gulp svgSprite - build sprite svg
 
-###### 1. install Node - https://nodejs.org/en/.
-###### In Command line in Windows following command: npm i gulp -g.
-###### To perform the initialization of the project in the folder that you created: npm init.
-###### npm i -g npm-check-updates, ncu, ncu -u, npm i NamePlugin - update gulp plugins and install
+###### 1. download and install Node.js
+###### 2. install gulp - npm i gulp -g.
+###### 3. install markup template - npm install.
+###### 4. run markup template - gulp.
+###### 5. build markup template - gulp build.
