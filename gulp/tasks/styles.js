@@ -1,5 +1,5 @@
 const plumber = require('gulp-plumber'),
-      scss = require('gulp-sass'),
+      sass = require('gulp-sass'),
       autoprefixer = require('gulp-autoprefixer'),
       csso = require('gulp-csso'),
       csscomb = require('gulp-csscomb'),
@@ -15,9 +15,10 @@ module.exports = function () {
         return $.gulp.src(stylesPATH.input + 'styles.sass')
             .pipe(plumber())
             .pipe(sourcemaps.init())
-            .pipe(scss())
+            .pipe(sass({outputStyle: 'expanded'}))
             .pipe(autoprefixer({
-                 overrideBrowserslist:  ['last 3 versions']
+                overrideBrowserslist:  ['last 3 versions'],
+                cascade: true
             }))
             .pipe(sourcemaps.write())
             .pipe(rename('styles.min.css'))
@@ -26,9 +27,10 @@ module.exports = function () {
     });
     $.gulp.task('styles:build', () => {
         return $.gulp.src(stylesPATH.input + 'styles.sass')
-            .pipe(scss())
+            .pipe(sass())
             .pipe(autoprefixer({
-                 overrideBrowserslist:  ['last 3 versions']
+                 overrideBrowserslist:  ['last 3 versions'],
+                 cascade: true
             }))
             .pipe(autoprefixer())
             .pipe(csscomb())
@@ -37,7 +39,7 @@ module.exports = function () {
     });
     $.gulp.task('styles:build-min', () => {
         return $.gulp.src(stylesPATH.input + 'styles.sass')
-            .pipe(scss())
+            .pipe(sass())
             .pipe(autoprefixer())
             .pipe(csscomb())
             .pipe(csso())
