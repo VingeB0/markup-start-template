@@ -7,6 +7,4 @@
 
 ###### 1. download and install Node.js
 ###### 2. install gulp - npm i gulp -g.
-###### 3. install markup template - npm install.
-###### 4. run markup template - gulp.
-###### 5. build markup template - gulp build.
+###### 3. install npm packages - npm install.
