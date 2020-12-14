@@ -1,49 +1,29 @@
-const plumber = require('gulp-plumber'),
-      sass = require('gulp-sass'),
-      autoprefixer = require('gulp-autoprefixer'),
-      csso = require('gulp-csso'),
-      csscomb = require('gulp-csscomb'),
-      sourcemaps = require('gulp-sourcemaps'),
-      rename = require('gulp-rename'),
-      stylesPATH = {
-          "input": "./dev/static/styles/",
-          "output": "./build/static/css/"
-      };
+const gulp = require('gulp');
+const plumber = require('gulp-plumber');
+const scss = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+const argv = require('yargs').argv;
+const gulpif = require('gulp-if');
 
-module.exports = function () {
-    $.gulp.task('styles:dev', () => {
-        return $.gulp.src(stylesPATH.input + 'styles.sass')
-            .pipe(plumber())
-            .pipe(sourcemaps.init())
-            .pipe(sass({outputStyle: 'expanded'}))
-            .pipe(autoprefixer({
-                overrideBrowserslist:  ['last 3 versions'],
-                cascade: true
-            }))
-            .pipe(sourcemaps.write())
-            .pipe(rename('styles.min.css'))
-            .pipe($.gulp.dest(stylesPATH.output))
-            .on('end', $.browserSync.reload);
-    });
-    $.gulp.task('styles:build', () => {
-        return $.gulp.src(stylesPATH.input + 'styles.sass')
-            .pipe(sass())
-            .pipe(autoprefixer({
-                 overrideBrowserslist:  ['last 3 versions'],
-                 cascade: true
-            }))
-            .pipe(autoprefixer())
-            .pipe(csscomb())
-            .pipe(rename('styles.min.css'))
-            .pipe($.gulp.dest(stylesPATH.output))
-    });
-    $.gulp.task('styles:build-min', () => {
-        return $.gulp.src(stylesPATH.input + 'styles.sass')
-            .pipe(sass())
-            .pipe(autoprefixer())
-            .pipe(csscomb())
-            .pipe(csso())
-            .pipe(rename('styles.min.css'))
-            .pipe($.gulp.dest(stylesPATH.output))
-    });
+// Работаем со стилями
+
+module.exports = function styles() {
+  return gulp.src('dev/static/styles/styles.sass')
+    .pipe(plumber())
+    .pipe(gulpif(!argv.prod, sourcemaps.init()))
+    .pipe(scss())
+    .pipe(autoprefixer({
+      overrideBrowserslist:  [ "last 4 version" ],
+      cascade: false
+    }))
+    .pipe(gulpif(argv.prod, cleanCSS({
+      debug: true,
+      compatibility: '*'
+    }, details => {
+      console.log(`${details.name}: Original size:${details.stats.originalSize} - Minified size: ${details.stats.minifiedSize}`)
+    })))
+    .pipe(gulpif(!argv.prod, sourcemaps.write()))
+    .pipe(gulp.dest('dist/static/css'))
 };

@@ -1,62 +1,19 @@
-"use strict";
+const gulp = require('gulp');
+const script = require('./gulp/tasks/scripts');
+const fonts = require('./gulp/tasks/fonts');
+const vendors = require('./gulp/tasks/vendorsJS');
+const imageMinify = require('./gulp/tasks/imageMinify');
+const styles = require('./gulp/tasks/styles');
+const clean = require('./gulp/tasks/clean');
+const pug2html = require('./gulp/tasks/pug');
+const spriteSVG = require('./gulp/tasks/spriteSVG');
+const serve = require('./gulp/tasks/serve');
+const spritePNG = require('./gulp/tasks/spritePNG');
 
-global.$ = {
-	path: {
-		task: require('./gulp/path/tasks.js')
-	},
-	gulp: require('gulp'),
-	browserSync: require('browser-sync').create(),
-	del: require('del')
-};
+const dev = gulp.parallel(pug2html, script, vendors, styles, imageMinify, spriteSVG, spritePNG, fonts);
 
-$.path.task.forEach(function (taskPath) {
-	require(taskPath)();
-});
-
-$.gulp.task('dev', $.gulp.series(
-	'clean',
-	$.gulp.parallel(
-		'pug',
-		'fonts',
-		'styles:dev',
-		'img:dev',
-		'libsJS:dev',
-		'js:dev',
-		'svg'
-	)
-));
-
-$.gulp.task('build', $.gulp.series(
-	'clean',
-	$.gulp.parallel(
-		'pug',
-		'fonts',
-		'styles:build',
-		'img:build',
-		'libsJS:build',
-		'js:build',
-		'svg'
-	)
-));
-
-
-$.gulp.task('build-min', $.gulp.series(
-	'clean',
-	$.gulp.parallel(
-		'pug',
-		'fonts',
-		'styles:build-min',
-		'img:build',
-		'libsJS:build',
-		'js:build-min',
-		'svg'
-	)
-));
-
-$.gulp.task('default', $.gulp.series(
-	'dev',
-	$.gulp.parallel(
-		'watch',
-		'serve'
-	)
-));
+exports.default = gulp.series(
+	clean,
+	dev,
+	serve
+);
