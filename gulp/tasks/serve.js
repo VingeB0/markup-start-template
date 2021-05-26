@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 
-const manifest = require('./manifest');
 const imageMinify = require('./imageMinify');
 const svgSprite = require('./spriteSVG');
 const pngSprite = require('./spritePNG');

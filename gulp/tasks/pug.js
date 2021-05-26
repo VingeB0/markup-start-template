@@ -11,7 +11,7 @@ if(argv.prod) {
     dataFromJson = JSON.parse(fs.readFileSync('./manifest.json'))
     dataFromJson.styles = dataFromJson['styles.css'];
     delete dataFromJson['styles.css'];
-    fs.writeFileSync("manifest.json", JSON.stringify(dataFromJson, null, 4));
+    fs.writeFileSync("./manifest.json", JSON.stringify(dataFromJson, null, 4));
 }
 
 // Преобразуем Pug в HTML
