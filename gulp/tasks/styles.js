@@ -6,6 +6,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const argv = require('yargs').argv;
 const gulpif = require('gulp-if');
+const hash = require('gulp-hash');
 
 // Работаем со стилями
 
@@ -13,7 +14,7 @@ module.exports = function styles() {
   return gulp.src('dev/static/styles/styles.sass')
     .pipe(plumber())
     .pipe(gulpif(!argv.prod, sourcemaps.init()))
-    .pipe(scss())
+    .pipe(scss({outputStyle: 'expanded'}))
     .pipe(autoprefixer({
       overrideBrowserslist:  [ "last 4 version" ],
       cascade: false
@@ -25,5 +26,10 @@ module.exports = function styles() {
       console.log(`${details.name}: Original size:${details.stats.originalSize} - Minified size: ${details.stats.minifiedSize}`)
     })))
     .pipe(gulpif(!argv.prod, sourcemaps.write()))
+    .pipe(gulpif(argv.prod, hash({ template: '<%= name %>-<%= hash %>.min<%= ext %>' })))
     .pipe(gulp.dest('dist/static/css'))
+    .pipe(gulpif(argv.prod, hash.manifest('manifest.json', {
+      deleteOld: true
+    })))
+    .pipe((gulpif(argv.prod, gulp.dest('./'))))
 };

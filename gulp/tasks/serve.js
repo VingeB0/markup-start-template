@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 
+const manifest = require('./manifest');
 const imageMinify = require('./imageMinify');
 const svgSprite = require('./spriteSVG');
 const pngSprite = require('./spritePNG');
@@ -10,12 +11,11 @@ const script = require('./scripts');
 const server = require('browser-sync').create();
 
 // Запуск сервера а также слежка за файлами
-
 module.exports = function serve(cb) {
   server.init({
     server: 'dist',
-    notify: false,
-    open: true,
+    notify: true,
+    open: false,
     cors: true
   });
 
@@ -24,7 +24,7 @@ module.exports = function serve(cb) {
   gulp.watch('dev/static/images/sprite/png/*.png', gulp.series(pngSprite)).on('change', server.reload);
   gulp.watch('dev/static/styles/**/*.sass', gulp.series(styles)).on('change', server.reload);
   gulp.watch('dev/static/js/**/*.js', gulp.series(script)).on('change', server.reload);
-  gulp.watch('dev/pug/**/*.pug', gulp.series(pug2html));
+  gulp.watch('dev/pug/**/*.pug', gulp.series(pug2html)).on('change', server.reload);
   gulp.watch('dist/*.html').on('change', server.reload);
 
   return cb()

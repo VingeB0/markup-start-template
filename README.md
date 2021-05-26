@@ -1,10 +1,9 @@
-# Start markup template - Gulp + Pug + SASS  + BrowserSync
+# Start markup template - Gulp + Pug + SASS + BrowserSync + Linters + Hash css file
 
-- gulp - run the template
-- gulp dev - run the template
-- gulp build - build
-- gulp build-min - build min
+Необходимо для этой сборки:
+- версия node v12.22.1 и npm 6.14.12 или node -v v10.24.0 и npm -v 6.14.11
+- галп версии 4
 
-###### 1. download and install Node.js
-###### 2. install gulp - npm i gulp -g.
-###### 3. install npm packages - npm install.
+Команды для запуска
+- gulp - запуск дев режима
+- gulp —prod - запуск прод режима с валидатором html

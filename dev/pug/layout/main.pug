@@ -1,3 +1,5 @@
+- var cssStyle = "static/css/" + (styles || "styles.css");
+
 include ../utils/mixins
 block variables
 
@@ -45,7 +47,7 @@ html(lang="ru-RU")
     meta(name="apple-mobile-web-app-capable" content="yes")
     meta(name="apple-mobile-web-app-title" content="Application Name")
 
-    link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+    link(rel="stylesheet" type='text/css' href=cssStyle)
 
     <!--[if lt IE 9]>
     script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
