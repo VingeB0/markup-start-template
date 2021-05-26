@@ -23,6 +23,6 @@ module.exports = function pug2html() {
       locals: dataFromJson || {}
     }), pug({pretty: true})))
     .pipe(plumber.stop())
-    .pipe(gulpif(argv.prod, htmlValidator()))
+    .pipe(htmlValidator())
     .pipe(gulp.dest('dist'))
 };

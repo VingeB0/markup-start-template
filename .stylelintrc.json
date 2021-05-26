@@ -31,7 +31,9 @@
       "vh",
       "vm",
       "vmax",
-      "vmin"
+      "vmin",
+      "s",
+      "ms"
     ]
   }
 }

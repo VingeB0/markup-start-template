@@ -11,7 +11,7 @@ const hash = require('gulp-hash');
 // Работаем со стилями
 
 module.exports = function styles() {
-  return gulp.src('dev/static/styles/styles.sass')
+  return gulp.src('dev/static/styles/styles.scss')
     .pipe(plumber())
     .pipe(gulpif(!argv.prod, sourcemaps.init()))
     .pipe(scss({outputStyle: 'expanded'}))
