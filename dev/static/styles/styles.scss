@@ -122,8 +122,14 @@ body {
   text-rendering: optimizeSpeed;
   font-family: $OS, $sserif;
   line-height: 1.5;
+
+
+
+
   scroll-behavior: smooth;
+
   text-size-adjust: none;
+
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }

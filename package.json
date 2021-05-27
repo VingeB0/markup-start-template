@@ -7,8 +7,12 @@
     "start": "gulp",
     "build": "gulp --prod",
     "style:lint": "stylelint ./dev/static/styles/**/*.scss --syntax scss",
-    "style:fix": "stylelint './dev/static/styles/**/*.scss' --syntax scss --fix",
-    "prepare": "husky install"
+    "style:fix": "stylelint './dev/static/styles/**/*.scss' --syntax scss --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.scss": [
