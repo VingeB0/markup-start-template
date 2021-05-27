@@ -16,7 +16,8 @@
   },
   "lint-staged": {
     "*.scss": [
-      "stylelint --syntax scss --fix", "git add"
+      "npm run style:fix",
+      "git add"
     ]
   },
   "author": "Davii Vladimir",
