@@ -1,10 +1,11 @@
 {
   "plugins": [
-    "stylelint-scss"
+    "stylelint-scss",
+    "stylelint-order"
   ],
   "extends": [
     "stylelint-config-standard",
-    "stylelint-config-standard-scss"
+    "stylelint-config-rational-order"
   ],
   "rules": {
     "indentation": 2,
@@ -23,6 +24,8 @@
     "number-leading-zero": "never",
     "no-descending-specificity": null,
     "selector-pseudo-element-colon-notation": null,
+    "no-invalid-position-at-import-rule": null,
+    "at-rule-no-unknown": null,
     "unit-allowed-list": [
       "em",
       "rem",

@@ -3,10 +3,10 @@
 //html - font-size: 62.5% - 10px
 //div - default font-size: 2rem - 20px
 //div - default font-size: .1rem - 1px
-@import 'utils/fonts';
-@import 'utils/vars';
-@import 'utils/libs';
-@import 'utils/mixins';
+@import "utils/fonts";
+@import "utils/vars";
+@import "utils/libs";
+@import "utils/mixins";
 
 *,
 *::before,
@@ -20,11 +20,6 @@
 }
 
 *:-moz-placeholder {
-  color: #666;
-  opacity: 1;
-}
-
-*::-moz-placeholder {
   color: #666;
   opacity: 1;
 }
@@ -55,9 +50,9 @@ p {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
-  color: inherit;
 }
 
 img {
@@ -96,41 +91,45 @@ input,
 select,
 textarea,
 button {
-  appearance: none;
-  outline: none;
-  border-radius: 0;
-  background-clip: padding-box;
-  border: 1px solid #666;
   padding: 0;
   font: inherit;
+  background-clip: padding-box;
+  border: 1px solid #666;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
 }
 
 ul,
 ol,
 li {
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 ::selection {
-  background: #b3d4fc;
-  text-shadow: none;
   color: #000;
+  text-shadow: none;
+  background: #b3d4fc;
 }
 
 body {
-  text-rendering: optimizeSpeed;
-  scroll-behavior: smooth;
-  height: 100%;
   position: relative;
-  text-size-adjust: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: $OS, $sserif;
-  font-size: 100%;
-  line-height: 1.5;
+  height: 100%;
   color: #000;
+  font-size: 100%;
+  text-rendering: optimizeSpeed
+;
+  font-family: $OS, $sserif;
+  line-height: 1.5;
+
+  scroll-behavior: smooth;
+  text-size-adjust: none
+;
+  -moz-osx-font-smoothing: grayscale;
+
+  -webkit-font-smoothing: antialiased;
 }
 
 .wrapper {
@@ -157,14 +156,14 @@ body {
 /* remove all animations */
 @media (prefers-reduced-motion: reduce) {
   * {
+    transition-duration: .01ms !important;
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: .01ms !important;
     scroll-behavior: auto !important;
   }
 }
-@import 'common';
-@import 'dev/static/styles/modules/modules';
-@import 'pages/pages';
-@import 'sections/sections';
-@import 'media';
+@import "common";
+@import "dev/static/styles/modules/modules";
+@import "pages/pages";
+@import "sections/sections";
+@import "media";

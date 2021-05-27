@@ -9,6 +9,16 @@
     "style:lint": "stylelint ./dev/static/styles/**/*.scss --syntax scss",
     "style:fix": "stylelint './dev/static/styles/**/*.scss' --syntax scss --fix"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(css|scss)": [
+      "stylelint --fix"
+    ]
+  },
   "author": "Davii Vladimir",
   "license": "MIT",
   "devDependencies": {
@@ -31,6 +41,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^6.0.0",
+    "gulp-hash": "^4.2.2",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "^1.2.1",
@@ -45,17 +56,21 @@
     "gulp-uglify": "^3.0.2",
     "gulp-w3c-html-validator": "^2.0.0",
     "gulp.spritesmith": "^6.12.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "merge-stream": "^2.0.0",
     "node-sass": "^4.13.1",
     "stylelint": "^13.13.1",
-    "stylelint-config-standard-scss": "^1.1.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.19.0",
     "vinyl-buffer": "^1.0.1",
     "webpack-stream": "^6.1.2",
     "yargs": "^15.3.1"
   },
   "dependencies": {
-    "gulp-hash": "^4.2.2",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
     "svg4everybody": "^2.1.9"
