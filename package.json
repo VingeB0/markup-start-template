@@ -57,7 +57,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-w3c-html-validator": "^2.0.0",
     "gulp.spritesmith": "^6.12.1",
-    "husky": "^6.0.0",
+    "husky": "^4.3.8",
     "lint-staged": "^11.0.0",
     "merge-stream": "^2.0.0",
     "node-sass": "^4.13.1",
