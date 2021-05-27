@@ -23,7 +23,7 @@
     "number-leading-zero": "never",
     "no-descending-specificity": null,
     "selector-pseudo-element-colon-notation": null,
-    "unit-whitelist": [
+    "unit-allowed-list": [
       "em",
       "rem",
       "%",
