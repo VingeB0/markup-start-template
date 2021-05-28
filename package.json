@@ -6,11 +6,13 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp --prod",
-    "lint:css": "stylelint ./dev/static/styles/*.scss --syntax scss",
-    "lint:css-fix": "stylelint './dev/static/styles/*.scss' --syntax scss --fix",
-    "lint:js": "npx eslint . --ext .js",
-    "lint:js-fix": "npx standart --fix",
-    "prepare": "./scripts/symlink.sh"
+    "lint:style": "stylelint ./dev/static/styles/*.scss --syntax scss",
+    "lint:style-fix": "stylelint './dev/static/styles/*.scss' --syntax scss --fix",
+    "lint:js": "eslint './dev/static/js/*.js'",
+    "lint:js-fix": "eslint './dev/static/js/*.js' --fix",
+
+    "test:js": "eslint src/js/**/*",
+    "test": "npm run test:js"
   },
   "standart": {
     "ignore": [
@@ -56,7 +58,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-w3c-html-validator": "^2.0.0",
     "gulp.spritesmith": "^6.12.1",
-    "husky": "^6.0.0",
+    "husky": "^3.1.0",
     "lint-staged": "^11.0.0",
     "merge-stream": "^2.0.0",
     "node-sass": "^4.13.1",
@@ -74,6 +76,11 @@
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
     "svg4everybody": "^2.1.9"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
   },
   "browserslist": [
     "last 3 version",
