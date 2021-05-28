@@ -10,7 +10,6 @@
     "lint:style-fix": "stylelint './dev/static/styles/*.scss' --syntax scss --fix",
     "lint:js": "eslint './dev/static/js/*.js'",
     "lint:js-fix": "eslint './dev/static/js/*.js' --fix",
-
     "test:js": "eslint ./dev/static/js/*.js",
     "test": "npm run test:js"
   },
@@ -73,9 +72,12 @@
     "yargs": "^15.3.1"
   },
   "dependencies": {
+    "eslint-config-htmlacademy": "^4.0.0",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
-    "svg4everybody": "^2husky.1.9"
+    "stylelint-config-htmlacademy": "^0.1.4",
+    "stylelint-order-htmlacademy": "^2.0.3",
+    "svg4everybody": "^2.1.9"
   },
   "husky": {
     "hooks": {

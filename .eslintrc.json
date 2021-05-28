@@ -3,6 +3,15 @@
     "browser": true,
     "jquery": true
   },
-  "extends": "standard",
-  "parser": "babel-eslint"
+  "parser": "babel-eslint",
+  "overrides": [
+    {
+      "files": [
+        "dev/static/js/*.js"
+      ],
+      "extends": [
+        "standard"
+      ]
+    }
+  ]
 }
