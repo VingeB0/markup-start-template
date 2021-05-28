@@ -11,7 +11,7 @@
     "lint:js": "eslint './dev/static/js/*.js'",
     "lint:js-fix": "eslint './dev/static/js/*.js' --fix",
 
-    "test:js": "eslint src/js/**/*",
+    "test:js": "eslint ./dev/static/js/*.js",
     "test": "npm run test:js"
   },
   "standart": {
