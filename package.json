@@ -75,7 +75,7 @@
   "dependencies": {
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
-    "svg4everybody": "^2.1.9"
+    "svg4everybody": "^2husky.1.9"
   },
   "husky": {
     "hooks": {
