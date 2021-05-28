@@ -1,8 +1,9 @@
 {
+  "parser": "babel-eslint",
   "overrides": [
     {
       "files": [
-        "dev/static/**/*.js"
+        "dev/static/js/*.js"
       ],
       "extends": [
         "standard"

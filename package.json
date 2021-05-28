@@ -6,17 +6,25 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp --prod",
-    "style:lint": "stylelint ./dev/static/styles/**/*.scss --syntax scss",
-    "style:fix": "stylelint './dev/static/styles/**/*.scss' --syntax scss --fix"
+    "lint:css": "stylelint ./dev/static/styles/*.scss --syntax scss",
+    "lint:css-fix": "stylelint './dev/static/styles/*.scss' --syntax scss --fix",
+    "lint:js": "npx eslint . --ext .js",
+    "lint:js-fix": "npx standart --fix",
+    "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "standart": {
+    "ignore": [
+      "./node_modules",
+      "./dev/static/js/vendor"
+    ]
   },
   "lint-staged": {
-    "*.scss": [
-      "npm run style:fix",
+    "./dev/static/js/*.js": [
+      "npm run lint:js-fix",
+      "git add"
+    ],
+    "./dev/static/styles/*.scss": [
+      "npm run lint:css-fix",
       "git add"
     ]
   },
@@ -25,6 +33,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-root-import": "^6.6.0",

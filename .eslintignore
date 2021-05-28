@@ -1,0 +1,5 @@
+/dev/static/js/vendor/*.js
+/dist
+gulp
+gulpfile.js
+/node_modules

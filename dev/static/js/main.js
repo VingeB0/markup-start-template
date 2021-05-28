@@ -1,7 +1,7 @@
-import $ from 'jquery';
+import $ from 'jquery'
 // window.jQuery = $; window.$ = $ // import module example (npm i -D jquery)
-//required if js from vendor folder
+// required if js from vendor folder
 
-$(document).ready(function () {
-    console.log('hello world!');
-});
+$(document).ready(function() {
+  console.log('hello world!')
+})

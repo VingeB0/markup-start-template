@@ -1,22 +1,21 @@
-const gulp = require('gulp');
-const plumber = require('gulp-plumber');
-const scss = require('gulp-sass');
-const cleanCSS = require('gulp-clean-css');
-const sourcemaps = require('gulp-sourcemaps');
-const autoprefixer = require('gulp-autoprefixer');
-const argv = require('yargs').argv;
-const gulpif = require('gulp-if');
-const hash = require('gulp-hash');
+const gulp = require('gulp')
+const plumber = require('gulp-plumber')
+const scss = require('gulp-sass')
+const cleanCSS = require('gulp-clean-css')
+const sourcemaps = require('gulp-sourcemaps')
+const autoprefixer = require('gulp-autoprefixer')
+const argv = require('yargs').argv
+const gulpif = require('gulp-if')
+const hash = require('gulp-hash')
 
 // Работаем со стилями
-
 module.exports = function styles() {
   return gulp.src('dev/static/styles/styles.scss')
     .pipe(plumber())
     .pipe(gulpif(!argv.prod, sourcemaps.init()))
-    .pipe(scss({outputStyle: 'expanded'}))
+    .pipe(scss({ outputStyle: 'expanded' }))
     .pipe(autoprefixer({
-      overrideBrowserslist:  [ "last 4 version" ],
+      overrideBrowserslist: ['last 4 version'],
       cascade: false
     }))
     .pipe(gulpif(argv.prod, cleanCSS({
@@ -32,4 +31,4 @@ module.exports = function styles() {
       deleteOld: true
     })))
     .pipe((gulpif(argv.prod, gulp.dest('./'))))
-};
+}

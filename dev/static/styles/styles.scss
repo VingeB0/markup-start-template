@@ -118,24 +118,19 @@ body {
   position: relative;
   height: 100%;
   color: #000;
-
   font-size: 100%;
-
   text-rendering: optimizeSpeed;
-  font-family: $OS, $sserif
-;
+  font-family: $OS, $sserif;
   line-height: 1.5;
   scroll-behavior: smooth;
-  text-size-adjust: none;
-
-
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 
 .wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: column
+;
   height: 100%;
 }
 
