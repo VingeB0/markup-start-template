@@ -4,12 +4,5 @@
     "jquery": true
   },
   "extends": "standard",
-  "parser": "babel-eslint",
-  "overrides": [
-    {
-      "files": [
-        "dev/static/js/*.js"
-      ]
-    }
-  ]
+  "parser": "babel-eslint"
 }
