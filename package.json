@@ -83,7 +83,7 @@
     }
   },
   "browserslist": [
-    "last 3 version",
+    "last 2 version",
     "> 1%",
     "maintained node versions",
     "not dead"
