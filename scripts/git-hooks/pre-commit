@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+echo "pre commit hook start"
+npm run lint:js-fix
+echo "pre commit hook finish"

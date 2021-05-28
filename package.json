@@ -10,22 +10,12 @@
     "lint:css-fix": "stylelint './dev/static/styles/*.scss' --syntax scss --fix",
     "lint:js": "npx eslint . --ext .js",
     "lint:js-fix": "npx standart --fix",
-    "prepare": "husky install"
+    "prepare": "./scripts/symlink.sh"
   },
   "standart": {
     "ignore": [
       "./node_modules",
       "./dev/static/js/vendor"
-    ]
-  },
-  "lint-staged": {
-    "./dev/static/js/*.js": [
-      "npm run lint:js-fix",
-      "git add"
-    ],
-    "./dev/static/styles/*.scss": [
-      "npm run lint:css-fix",
-      "git add"
     ]
   },
   "author": "Davii Vladimir",
