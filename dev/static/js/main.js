@@ -3,6 +3,8 @@ import $ from 'jquery'
 // required if js from vendor folder
 
 
+
+
 $(document).ready(function() {
   console.log('hello world!')
 })
