@@ -4,8 +4,8 @@
   "description": "markup template",
   "main": "index.js",
   "scripts": {
-    "lint:style": "stylelint ./dev/static/styles/*.scss --syntax scss",
-    "lint:style-fix": "stylelint './dev/static/styles/*.scss' --syntax scss --fix",
+    "lint:style": "stylelint ./dev/static/styles/**/*.scss --syntax scss",
+    "lint:style-fix": "stylelint './dev/static/styles/**/*.scss' --syntax scss --fix",
     "lint:js": "eslint ./dev/static/js/*.js",
     "lint:js-fix": "eslint ./dev/static/js/*.js --fix",
     "test": "npm run lint:js && npm run lint:style",
