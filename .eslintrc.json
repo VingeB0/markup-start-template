@@ -7,7 +7,7 @@
   "overrides": [
     {
       "files": [
-        "dev/static/js/*.js"
+        "dev/static/js/**/*.js"
       ],
       "extends": [
         "standard"

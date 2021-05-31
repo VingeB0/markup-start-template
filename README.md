@@ -7,5 +7,8 @@
 Команды для запуска
 - gulp - запуск дев режима
 - gulp —prod - запуск прод режима с валидатором html
-- npm style:lint - запуск линтера на поиск ошибок в цсс
-- npm run style:fix - запуск линтера, который автоформатирует цсс код
+- npm lint:style - запуск линтера scss
+- npm lint:style-fix - запуск линтера фиксить scss
+- npm lint:js - запуск линтера на js
+- npm lint:js-fix - запуск линтера фиксить js
+- npm test - запуск scss и js линтеров

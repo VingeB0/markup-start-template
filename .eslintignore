@@ -1,4 +1,4 @@
-/dev/static/js/vendor/*.js
+/dev/static/js/vendor/
 /dist
 gulp
 gulpfile.js
