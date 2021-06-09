@@ -1,5 +1,5 @@
 const gulp = require('gulp')
-const uglify = require('gulp-uglify')
+const uglify = require('gulp-uglify-es').default;
 const argv = require('yargs').argv
 const webpack = require('webpack-stream')
 const rename = require('gulp-rename')
