@@ -1,5 +1,6 @@
 @mixin font-face($font-name, $path, $weight: normal, $style: normal) {
   @font-face {
+    font-display: swap;
     font-weight: $weight;
     font-family: quote($font-name);
     font-style: $style;
